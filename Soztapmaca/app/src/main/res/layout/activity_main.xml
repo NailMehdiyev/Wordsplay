@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main_constrant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A28533"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:src="@drawable/yes"
+        app:layout_constraintBottom_toBottomOf="@id/daire"
+        app:layout_constraintLeft_toLeftOf="@+id/daire"
+        app:layout_constraintTop_toTopOf="@id/daire" />
+
+
+    <TextView
+        android:id="@+id/main_activity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ggdgdfg"
+        android:textColor="#A28533"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/username"
+        app:layout_constraintLeft_toLeftOf="@id/username"
+        app:layout_constraintRight_toRightOf="@id/username"
+        app:layout_constraintTop_toTopOf="@id/username" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/daire"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_person"
+        app:civ_border_color="#23F995"
+        app:civ_border_width="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/urekresm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/men"
+        app:layout_constraintBottom_toBottomOf="@id/daire"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/daire" />
+
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/ew"
+        android:onClick="videoyukle"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@id/urekresm"
+        app:layout_constraintRight_toLeftOf="@id/lg"
+        app:layout_constraintTop_toTopOf="@id/urekresm" />
+
+
+    <LinearLayout
+        android:id="@+id/lg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/urekresm"
+        app:layout_constraintLeft_toLeftOf="@+id/urekresm"
+        app:layout_constraintRight_toRightOf="@+id/urekresm"
+        app:layout_constraintTop_toTopOf="@+id/urekresm">
+
+
+        <TextView
+            android:id="@+id/hearttxt"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="+1"
+            android:textColor="#E75D53"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/heart" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="ayarlatbtn"
+            android:src="@drawable/ic_seetting" />
+
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginBottom="15dp"
+
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+
+        </com.google.android.gms.ads.AdView>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/soz"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/bas"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soz">
+
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="200dp"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_button"
+            android:onClick="btnclick"
+            android:text="Oyna"
+            android:textColor="#FFEB3B"
+            android:textSize="19sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/markt"
+            android:layout_width="200dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_button"
+            android:onClick="btnclick"
+            android:text="Market"
+            android:textColor="#FFEB3B"
+            android:textSize="19sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_button"
+            android:onClick="btnclick"
+
+            android:text="Çıxış"
+            android:textColor="#FFEB3B"
+            android:textSize="19sp"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
